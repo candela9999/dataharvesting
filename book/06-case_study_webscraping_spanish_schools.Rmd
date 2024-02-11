@@ -460,7 +460,7 @@ selected_node <- text_boxes %>% xml_text() %>% str_detect("Tipo Centro")
 selected_node
 ```
 
-The 7th node is the one we're looking for. Let's subset that node and from here on we can do as we did last time: extract the `strong` tag. Note that we'll use the XPath `.//strong`. `.//strong` means to find all `strong` tags but the `.` means to search for all tags *below* the current selection. If we would write instead `//strong`, it would search for all `strong` tags in the entire source code. The `.` in front tells XPath to search downwards from the current selection. Let's write that and confirmar that we get the correct text:
+The 7th node is the one we're looking for. Let's subset that node and from here on we can do as we did last time: extract the `strong` tag. Note that we'll use the XPath `.//strong`. `.//strong` means to find all `strong` tags but the `.` means to search for all tags *below* the current selection. If we would write instead `//strong`, it would search for all `strong` tags in the entire source code. The `.` in front tells XPath to search downwards from the current selection. Let's write that and confirm that we get the correct text:
 
 ```{r}
 single_type_school <-
